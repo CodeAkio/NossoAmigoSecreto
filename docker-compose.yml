@@ -38,6 +38,8 @@ services:
       - '3000:3000'
     volumes:
       - '.:/nosso_amigo_secreto'
+    environment:
+      - DB_PASSWORD=postgres
     volumes_from:
     - box
     environment:

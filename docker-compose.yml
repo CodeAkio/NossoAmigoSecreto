@@ -2,7 +2,9 @@ version: '2'
 
 services:
   postgres:
-    image: 'postgres:9.5'
+    image: 'postgres:12.2'
+    environment:
+      - POSTGRES_PASSWORD=postgres
     volumes:
       - 'postgres:/var/lib/postgresql/data'
 
@@ -36,6 +38,8 @@ services:
       - '3000:3000'
     volumes:
       - '.:/nosso_amigo_secreto'
+    environment:
+      - DB_PASSWORD=postgres
     volumes_from:
     - box
 
@@ -44,9 +48,14 @@ services:
     volumes:
       - /box
 
-
+  mailcatcher:
+    image: yappabe/mailcatcher
+    ports:
+      - 1025:1025
+      - 1080:1080
 
 volumes:
   redis:
   postgres:
   box:
+  

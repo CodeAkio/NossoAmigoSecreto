@@ -27,6 +27,8 @@ services:
       - '.:/nosso_amigo_secreto'
     volumes_from:
       - box
+    environment:
+      - DB_PASSWORD=postgres
 
   app:
     depends_on:
@@ -42,8 +44,6 @@ services:
       - DB_PASSWORD=postgres
     volumes_from:
     - box
-    environment:
-      - DB_PASSWORD=postgres
 
   box:
     image: busybox

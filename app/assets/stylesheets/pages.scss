@@ -1,18 +1,22 @@
 .home{
   margin-top: 15%;
-  .home-icon{
+  .home-icon {
     color: #e86252;
     font-size: 24px;
   }
-  .home-button{
-    background-color: #e86252
+  .home-button {
+    background-color: #e86252;
   }
-  .subtitle{
+  .subtitle {
     color: #aaa;
     margin-bottom: 30px;
   }
-  .subtitle2{
+  .subtitle2 {
     color: #e86252;
     margin-bottom: 40px;
+  }
+  .my-campaigns-title {
+    text-align: left;
+    margin-top: 8%;
   }
 }
